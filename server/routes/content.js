@@ -15,11 +15,15 @@ const VALID_SECTIONS = [
   'meta',
 ];
 
-router.get('/', (req, res) => {
-  res.json(getContent());
+router.get('/', async (req, res, next) => {
+  try {
+    res.json(await getContent());
+  } catch (err) {
+    next(err);
+  }
 });
 
-router.put('/:section', requireAuth, (req, res) => {
+router.put('/:section', requireAuth, async (req, res, next) => {
   const { section } = req.params;
   if (!VALID_SECTIONS.includes(section)) {
     return res.status(400).json({ error: `Unknown section: ${section}` });
@@ -28,10 +32,10 @@ router.put('/:section', requireAuth, (req, res) => {
     return res.status(400).json({ error: 'Request body is required' });
   }
   try {
-    const updated = updateContentSection(section, req.body);
+    const updated = await updateContentSection(section, req.body);
     res.json(updated);
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    next(err);
   }
 });
 

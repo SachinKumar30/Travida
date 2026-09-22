@@ -5,15 +5,14 @@ node_modules/
 dist/
 dist-ssr/
 
-# Environment files
+# Vercel CLI project link
+.vercel/
+
+# Environment files (secrets — .env.production is committed on purpose,
+# it only sets VITE_API_URL=/api, nothing sensitive)
 .env
 .env.local
 .env.*.local
-
-# Server runtime data (auto-generated; do not commit user content or credentials)
-server/data/content.json
-server/data/submissions.json
-server/data/admin.json
 
 # Logs
 *.log
