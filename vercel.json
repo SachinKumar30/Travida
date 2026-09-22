@@ -2,8 +2,23 @@
   "buildCommand": "npm install --prefix client && npm run build --prefix client",
   "outputDirectory": "client/dist",
   "installCommand": "npm install",
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/services", "destination": "/index.html" },
+    { "source": "/process", "destination": "/index.html" },
+    { "source": "/who-we-serve", "destination": "/index.html" },
+    { "source": "/why-travida", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" },
+    { "source": "/admin/login", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/admin/hero", "destination": "/index.html" },
+    { "source": "/admin/problem", "destination": "/index.html" },
+    { "source": "/admin/services", "destination": "/index.html" },
+    { "source": "/admin/process", "destination": "/index.html" },
+    { "source": "/admin/stakeholders", "destination": "/index.html" },
+    { "source": "/admin/why-choose", "destination": "/index.html" },
+    { "source": "/admin/contact-info", "destination": "/index.html" },
+    { "source": "/admin/site-settings", "destination": "/index.html" },
+    { "source": "/admin/submissions", "destination": "/index.html" }
   ]
 }

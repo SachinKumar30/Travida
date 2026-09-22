@@ -98,6 +98,15 @@ Visit `http://localhost:5173` for the public site and
    deploys `api/[...all].js` as a serverless function handling all `/api/*`
    requests — same origin, so no CORS configuration needed in production.
 
+**If you add a new client-side page/route**, add its path to the
+`rewrites` array in `vercel.json` (each existing page is listed
+explicitly, mapped to `/index.html`, so React Router can handle it
+client-side). This project deliberately avoids a wildcard/catch-all
+rewrite pattern — Vercel's rewrite matcher doesn't reliably support
+excluding `/api/*` from one (tried and reverted twice), so an explicit
+per-route list is the reliable alternative for a site with a small, fixed
+set of pages like this one.
+
 ## 5. Point your domain at it
 
 In the Vercel project: **Settings → Domains → Add**, enter your domain
