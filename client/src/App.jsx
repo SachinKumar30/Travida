@@ -1,7 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ContentProvider } from './context/ContentContext';
-import Home from './pages/Home';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import ProcessPage from './pages/ProcessPage';
+import StakeholdersPage from './pages/StakeholdersPage';
+import WhyChoosePage from './pages/WhyChoosePage';
+import ContactPage from './pages/ContactPage';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -20,38 +26,39 @@ export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <ContentProvider>
-                <Home />
-              </ContentProvider>
-            }
-          />
-          <Route path="/admin/login" element={<AdminLogin />} />
-          <Route
-            path="/admin"
-            element={
-              <ProtectedRoute>
-                <ContentProvider>
+        <ContentProvider>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/process" element={<ProcessPage />} />
+              <Route path="/who-we-serve" element={<StakeholdersPage />} />
+              <Route path="/why-travida" element={<WhyChoosePage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Route>
+
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute>
                   <AdminLayout />
-                </ContentProvider>
-              </ProtectedRoute>
-            }
-          >
-            <Route index element={<AdminDashboard />} />
-            <Route path="hero" element={<HeroEditor />} />
-            <Route path="problem" element={<ProblemEditor />} />
-            <Route path="services" element={<ServicesEditor />} />
-            <Route path="process" element={<ProcessEditor />} />
-            <Route path="stakeholders" element={<StakeholdersEditor />} />
-            <Route path="why-choose" element={<WhyChooseEditor />} />
-            <Route path="contact-info" element={<ContactInfoEditor />} />
-            <Route path="site-settings" element={<SiteSettingsEditor />} />
-            <Route path="submissions" element={<Submissions />} />
-          </Route>
-        </Routes>
+                </ProtectedRoute>
+              }
+            >
+              <Route index element={<AdminDashboard />} />
+              <Route path="hero" element={<HeroEditor />} />
+              <Route path="problem" element={<ProblemEditor />} />
+              <Route path="services" element={<ServicesEditor />} />
+              <Route path="process" element={<ProcessEditor />} />
+              <Route path="stakeholders" element={<StakeholdersEditor />} />
+              <Route path="why-choose" element={<WhyChooseEditor />} />
+              <Route path="contact-info" element={<ContactInfoEditor />} />
+              <Route path="site-settings" element={<SiteSettingsEditor />} />
+              <Route path="submissions" element={<Submissions />} />
+            </Route>
+          </Routes>
+        </ContentProvider>
       </AuthProvider>
     </BrowserRouter>
   );

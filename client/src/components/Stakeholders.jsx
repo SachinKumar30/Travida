@@ -8,7 +8,7 @@ export default function Stakeholders({ data }) {
   const current = data[Math.min(active, data.length - 1)];
 
   return (
-    <section id="stakeholders" className="bg-[#f6f8fc] py-20 sm:py-28">
+    <section className="bg-[#f6f8fc] py-20 sm:py-28">
       <div className="container-x">
         <div className="max-w-2xl">
           <span className="section-eyebrow">Who We Serve</span>

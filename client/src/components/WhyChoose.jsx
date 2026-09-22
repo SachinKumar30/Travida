@@ -4,7 +4,7 @@ export default function WhyChoose({ data }) {
   if (!data) return null;
 
   return (
-    <section id="why-choose" className="bg-white py-20 sm:py-28">
+    <section className="bg-white py-20 sm:py-28">
       <div className="container-x">
         <div className="max-w-2xl">
           <span className="section-eyebrow">Why Travida</span>

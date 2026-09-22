@@ -2,7 +2,7 @@ export default function ProcessTimeline({ data }) {
   if (!data) return null;
 
   return (
-    <section id="process" className="bg-navy-950 py-20 sm:py-28">
+    <section className="bg-navy-950 py-20 sm:py-28">
       <div className="container-x">
         <div className="max-w-2xl">
           <span className="section-eyebrow text-green-400">How It Works</span>

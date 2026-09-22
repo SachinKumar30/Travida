@@ -4,7 +4,7 @@ export default function Services({ data }) {
   if (!data) return null;
 
   return (
-    <section id="services" className="bg-navy-50 bg-[#f6f8fc] py-20 sm:py-28">
+    <section className="bg-navy-50 bg-[#f6f8fc] py-20 sm:py-28">
       <div className="container-x">
         <div className="max-w-2xl">
           <span className="section-eyebrow">What We Do</span>

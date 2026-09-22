@@ -1,18 +1,11 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function Hero({ data }) {
   if (!data) return null;
 
-  const scrollTo = (e, href) => {
-    e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
   return (
-    <section
-      id="top"
-      className="relative flex min-h-screen items-center overflow-hidden bg-navy-950 pt-24 pb-20 sm:pt-28"
-    >
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-navy-950 pt-24 pb-20 sm:pt-28">
       <div
         className="absolute inset-0 opacity-[0.14]"
         style={{
@@ -40,21 +33,13 @@ export default function Hero({ data }) {
           <p className="mt-6 max-w-2xl text-lg text-white/75 sm:text-xl">{data.subheading}</p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#contact"
-              onClick={(e) => scrollTo(e, '#contact')}
-              className="btn-primary text-base"
-            >
+            <Link to="/contact" className="btn-primary text-base">
               {data.ctaPrimaryLabel}
               <ArrowRight size={18} />
-            </a>
-            <a
-              href="#process"
-              onClick={(e) => scrollTo(e, '#process')}
-              className="btn-outline text-base"
-            >
+            </Link>
+            <Link to="/process" className="btn-outline text-base">
               {data.ctaSecondaryLabel}
-            </a>
+            </Link>
           </div>
 
           <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs font-semibold uppercase tracking-wider text-white/50">

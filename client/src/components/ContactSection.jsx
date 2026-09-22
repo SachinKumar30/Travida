@@ -56,7 +56,7 @@ export default function ContactSection({ data }) {
   };
 
   return (
-    <section id="contact" className="bg-[#f6f8fc] py-20 sm:py-28">
+    <section className="bg-[#f6f8fc] py-20 sm:py-28">
       <div className="container-x">
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">

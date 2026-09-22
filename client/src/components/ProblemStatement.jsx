@@ -4,7 +4,7 @@ export default function ProblemStatement({ data }) {
   if (!data) return null;
 
   return (
-    <section id="problem" className="bg-white py-20 sm:py-28">
+    <section className="bg-white py-20 sm:py-28">
       <div className="container-x">
         <div className="max-w-2xl">
           <span className="section-eyebrow">The Challenge</span>

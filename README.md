@@ -1,8 +1,12 @@
 # Travida Logistics — Website
 
-A single-page marketing site for Travida Logistics (Grade-B to Grade-A warehouse
+A multi-page marketing site for Travida Logistics (Grade-B to Grade-A warehouse
 retrofit, compliance advisory, solar integration, and asset monetization) with a
-full admin panel for managing every section of the site without touching code.
+full admin panel for managing every page's content without touching code.
+
+Pages: Home (`/`), Services (`/services`), Process (`/process`),
+Who We Serve (`/who-we-serve`), Why Travida (`/why-travida`), and
+Contact (`/contact`).
 
 - **Frontend:** React 19 + Vite + Tailwind CSS 4 + React Router
 - **Backend:** Express API running as a Vercel serverless function, Supabase
@@ -105,9 +109,10 @@ registrar. Vercel provisions HTTPS automatically once DNS propagates
 
 ## Managing content
 
-Every section on the homepage — Hero, Problem Statement, Services, Process
-Timeline, Stakeholder Tabs, Why Choose Travida, Contact Info, and Site
-Settings — has its own editor in the admin panel (`/admin`). Array-based
+Every content section — Hero (Home page), Problem Statement (Home page),
+Services, Process Timeline, Stakeholder Tabs, Why Choose Travida, Contact
+Info, and Site Settings — has its own editor in the admin panel (`/admin`),
+regardless of which page it renders on. Array-based
 sections (services, process phases, stakeholder tabs, differentiators,
 metrics) support adding, removing, and reordering items. Saved changes are
 written straight to Supabase and reflected on the live site immediately (no
