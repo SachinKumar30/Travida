@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
-import { Loader2, Lock } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
 export default function AdminLogin() {
@@ -34,9 +34,7 @@ export default function AdminLogin() {
     <div className="flex min-h-screen items-center justify-center bg-navy-950 px-4">
       <div className="w-full max-w-sm rounded-2xl border border-white/10 bg-white p-8 shadow-xl">
         <div className="mb-6 flex flex-col items-center text-center">
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-navy-950">
-            <Lock size={20} className="text-green-400" />
-          </span>
+          <img src="/logo-full.png" alt="Travida Logistics" className="h-20 w-auto" />
           <h1 className="mt-4 text-xl font-bold text-navy-900">Travida Admin</h1>
           <p className="mt-1 text-sm text-navy-900/60">Sign in to manage site content</p>
         </div>

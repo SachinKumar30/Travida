@@ -14,6 +14,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { LogoMark } from '../../components/Logo';
 
 const NAV_ITEMS = [
   { to: '/admin', end: true, label: 'Overview', icon: LayoutDashboard },
@@ -35,7 +36,8 @@ export default function AdminLayout() {
     <div className="min-h-screen bg-[#f6f8fc]">
       <div className="flex">
         <aside className="fixed inset-y-0 left-0 z-20 hidden w-64 flex-col border-r border-navy-900/10 bg-navy-950 lg:flex">
-          <div className="flex h-16 items-center px-6 text-lg font-extrabold text-white">
+          <div className="flex h-16 items-center gap-2.5 px-6 text-lg font-extrabold text-white">
+            <LogoMark size={30} />
             Travida Admin
           </div>
           <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">
@@ -78,7 +80,10 @@ export default function AdminLayout() {
 
         <div className="flex-1 lg:pl-64">
           <header className="flex h-16 items-center justify-between border-b border-navy-900/10 bg-white px-5 lg:hidden">
-            <span className="font-bold text-navy-900">Travida Admin</span>
+            <span className="flex items-center gap-2 font-bold text-navy-900">
+              <LogoMark size={26} />
+              Travida Admin
+            </span>
             <button type="button" onClick={logout} className="text-sm font-medium text-navy-900/60">
               Log out
             </button>

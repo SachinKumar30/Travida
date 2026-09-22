@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { LogoMark } from './Logo';
 
 export default function Footer({ meta, contact }) {
   const year = new Date().getFullYear();
@@ -6,9 +7,14 @@ export default function Footer({ meta, contact }) {
   return (
     <footer className="bg-navy-950 py-10 text-white/60">
       <div className="container-x flex flex-col items-center justify-between gap-4 sm:flex-row">
-        <div className="text-center sm:text-left">
-          <p className="text-sm font-bold text-white">{meta?.siteName || 'Travida Logistics'}</p>
-          <p className="mt-1 text-xs">{meta?.footerTagline}</p>
+        <div className="flex items-center gap-3 text-center sm:text-left">
+          <LogoMark size={32} />
+          <div>
+            <p className="text-sm font-bold text-white">
+              {meta?.siteName || 'Travida Logistics'}
+            </p>
+            <p className="mt-1 text-xs">{meta?.footerTagline}</p>
+          </div>
         </div>
         <div className="flex flex-col items-center gap-1 text-xs sm:items-end">
           <p>

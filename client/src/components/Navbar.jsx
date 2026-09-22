@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const NAV_LINKS = [
   { href: '#problem', label: 'Challenge' },
@@ -35,12 +36,12 @@ export default function Navbar({ siteName }) {
       }`}
     >
       <nav className="container-x flex h-16 items-center justify-between sm:h-20">
-        <a
-          href="#top"
-          onClick={(e) => handleNavClick(e, '#top')}
-          className="text-lg font-extrabold tracking-tight text-white sm:text-xl"
-        >
-          {siteName || 'Travida Logistics'}
+        <a href="#top" onClick={(e) => handleNavClick(e, '#top')} className="shrink-0">
+          <Logo
+            siteName={siteName}
+            size={36}
+            textClassName="text-lg font-extrabold tracking-tight text-white sm:text-xl"
+          />
         </a>
 
         <div className="hidden items-center gap-8 lg:flex">
