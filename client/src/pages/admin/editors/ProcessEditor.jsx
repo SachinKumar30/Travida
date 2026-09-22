@@ -2,7 +2,7 @@ import { Plus } from 'lucide-react';
 import { useSectionDraft, EditorShell, Field } from '../editorShell';
 import ArrayItemCard, { moveItem } from '../ArrayItemCard';
 
-const BLANK_PHASE = { phase: 'Phase', title: '', description: '' };
+const BLANK_PHASE = { phase: 'Phase', title: '', points: [] };
 
 export default function ProcessEditor() {
   const { draft, setDraft, save, saving, savedTick, error } = useSectionDraft('process');
@@ -13,6 +13,11 @@ export default function ProcessEditor() {
     next[idx] = { ...next[idx], [key]: e.target.value };
     setDraft(next);
   };
+  const setPoints = (idx) => (e) => {
+    const next = [...phases];
+    next[idx] = { ...next[idx], points: e.target.value.split('\n') };
+    setDraft(next);
+  };
   const addPhase = () => setDraft([...phases, { ...BLANK_PHASE }]);
   const removePhase = (idx) => setDraft(phases.filter((_, i) => i !== idx));
   const move = (idx, dir) => setDraft(moveItem(phases, idx, idx + dir));
@@ -20,7 +25,7 @@ export default function ProcessEditor() {
   return (
     <EditorShell
       title="Process Timeline"
-      description="The phased retrofit process shown on the homepage."
+      description="The phased retrofit process shown on the Process page."
       draft={draft}
       saving={saving}
       savedTick={savedTick}
@@ -52,12 +57,12 @@ export default function ProcessEditor() {
                 <input className="input" value={p.title} onChange={setPhase(idx, 'title')} />
               </Field>
             </div>
-            <Field label="Description">
+            <Field label="Points (one per line)">
               <textarea
                 className="input resize-none"
-                rows={2}
-                value={p.description}
-                onChange={setPhase(idx, 'description')}
+                rows={4}
+                value={(p.points || []).join('\n')}
+                onChange={setPoints(idx)}
               />
             </Field>
           </ArrayItemCard>

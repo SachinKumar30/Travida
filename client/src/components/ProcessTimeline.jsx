@@ -1,3 +1,5 @@
+import { CheckCircle2 } from 'lucide-react';
+
 export default function ProcessTimeline({ data }) {
   if (!data) return null;
 
@@ -5,9 +7,9 @@ export default function ProcessTimeline({ data }) {
     <section className="bg-navy-950 py-20 sm:py-28">
       <div className="container-x">
         <div className="max-w-2xl">
-          <span className="section-eyebrow text-green-400">How It Works</span>
+          <span className="section-eyebrow text-green-400">Our Process</span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            A Structured, Four-Phase Retrofit Program
+            A Structured, Four-Phase Approach
           </h2>
           <p className="mt-5 text-lg text-white/70">
             Every engagement follows a phased methodology so owners and occupiers always know
@@ -26,7 +28,14 @@ export default function ProcessTimeline({ data }) {
                   {phase.phase}
                 </span>
                 <h3 className="mt-2 text-xl font-bold text-white">{phase.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/65">{phase.description}</p>
+                <ul className="mt-3 space-y-2">
+                  {(phase.points || []).map((point) => (
+                    <li key={point} className="flex items-start gap-2.5 text-sm text-white/65">
+                      <CheckCircle2 className="mt-0.5 shrink-0 text-green-500" size={16} />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </li>
           ))}

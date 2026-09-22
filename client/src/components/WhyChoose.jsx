@@ -29,7 +29,10 @@ export default function WhyChoose({ data }) {
         </div>
 
         {data.metrics && data.metrics.length > 0 && (
-          <div className="mt-16 grid grid-cols-2 gap-6 rounded-2xl bg-navy-950 p-8 sm:grid-cols-4 sm:p-10">
+          <div
+            className="mt-16 grid gap-6 rounded-2xl bg-navy-950 p-8 sm:p-10"
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))' }}
+          >
             {data.metrics.map((metric) => (
               <div key={metric.label} className="text-center">
                 <div className="text-3xl font-extrabold text-green-400 sm:text-4xl">

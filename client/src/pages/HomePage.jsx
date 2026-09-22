@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 import Hero from '../components/Hero';
 import ProblemStatement from '../components/ProblemStatement';
 
 export default function HomePage() {
   const { content } = useContent();
+  useDocumentTitle('Travida Logistics | Grade-A Warehouse Retrofit & Compliance');
 
   return (
     <div>

@@ -34,88 +34,127 @@ export const defaultContent = {
   },
   services: [
     {
-      icon: 'Layers',
-      title: 'Retrofit Solutions (Phase I–IV)',
+      icon: 'Building2',
+      title: 'Logistics & Warehousing Advisory',
       description:
-        'A structured, four-phase retrofit program that takes a warehouse from title regularization through structural upgrades to full compliance certification.',
+        'Strategic guidance for industrial real estate infrastructure — site selection, feasibility, and positioning across India’s logistics corridors.',
+    },
+    {
+      icon: 'ShieldCheck',
+      title: 'Legal & Compliance Services',
+      description:
+        'Complete regulatory adherence and documentation across CLU, fire & safety, environmental, labour, and structural compliance frameworks.',
+    },
+    {
+      icon: 'Layers',
+      title: 'Retrofit Solutions',
+      description:
+        'Conversion of Grade-B to Grade-A industrial facilities with advanced technologies — from super-flat flooring to structural optimization.',
     },
     {
       icon: 'Sun',
       title: 'Green Energy Integration',
       description:
-        'Rooftop solar design, installation, and grid integration that cuts operating costs and positions assets for ESG-aligned tenants and investors.',
-    },
-    {
-      icon: 'ShieldCheck',
-      title: 'Compliance Advisory',
-      description:
-        'End-to-end regulatory guidance covering CLU, fire & safety, environmental, labour, and structural compliance across state and central frameworks.',
+        'Solar power implementation for sustainable operations, cutting energy costs and positioning assets for ESG-aligned tenants and investors.',
     },
     {
       icon: 'TrendingUp',
-      title: 'Asset Monetization & Leasing',
+      title: 'Asset Monetization Services',
       description:
-        'Post-retrofit leasing strategy, tenant sourcing, and asset monetization support to maximize rental yield and institutional exit value.',
+        'Maximize ROI on industrial properties through structured leasing, tenant sourcing, and green-infrastructure financing support.',
     },
   ],
   process: [
     {
       phase: 'Phase I',
-      title: 'CLU & Title Regularization',
-      description:
-        'We audit land-use classification and title documentation, then manage Change of Land Use (CLU) applications and regularization with local authorities.',
+      title: 'Legal & Audit Compliance',
+      points: [
+        'CLU & Title Regularization',
+        'Fire & Safety Approvals',
+        'Building Plan & Structural Audit',
+      ],
     },
     {
       phase: 'Phase II',
-      title: 'Fire & Safety Approvals',
-      description:
-        'Fire safety audits, system upgrades, and coordination with fire departments to secure NOCs and safety certifications required for Grade-A occupancy.',
+      title: 'Retrofit (B-A Engineering)',
+      points: [
+        'Floor Enhancement (FMC2-compliant super-flat floors)',
+        'Vertical Expansion (hydraulic dock levelers, structural optimization)',
+        'Dockyard & Yard Optimization',
+      ],
     },
     {
       phase: 'Phase III',
-      title: 'Structural Audit & Upgrades',
-      description:
-        'Independent structural audits followed by targeted upgrades to flooring, roofing, racking capacity, and load-bearing systems.',
+      title: 'Green Energy & Solar',
+      points: [
+        'Solar integration for sustainable operations',
+        'Energy-efficient warehouse management',
+      ],
     },
     {
       phase: 'Phase IV',
-      title: 'Solar Integration & Monetization',
-      description:
-        'Rooftop solar deployment and a go-to-market leasing or sale strategy that unlocks Grade-A rental yields and monetization pathways.',
+      title: 'Monetization & Leasing',
+      points: [
+        'Structured rental agreements (30–40% rental increases)',
+        'Bank loans on green infrastructure (SIDBI)',
+        'Corporate leasing for MSMEs',
+      ],
     },
   ],
   stakeholders: [
     {
-      key: 'occupiers',
-      label: 'Corporates, FMCGs & MSMEs',
-      heading: 'Access Grade-A Warehouse Space',
+      key: 'msme-fmcg',
+      label: 'MSMEs & FMCGs',
+      heading: 'Cost-Effective, Compliant Warehouse Solutions',
       points: [
-        'Lease fully compliant, audit-ready warehouse space without capital-intensive ground-up construction.',
-        'Reduce regulatory and operational risk with facilities that meet fire, structural, and environmental standards.',
-        'Benefit from lower energy costs through solar-integrated infrastructure.',
-        'Scale logistics footprint faster with pre-vetted, ready-to-occupy sites across key logistics corridors.',
+        'Access Grade-A compliant warehouse space without heavy capital investment in ground-up construction.',
+        'Reduce regulatory risk with facilities that meet CLU, fire, and structural compliance standards.',
+        'Lower operating costs through solar-integrated, energy-efficient infrastructure.',
+        'Scale quickly with pre-vetted, ready-to-occupy sites across key logistics corridors.',
       ],
     },
     {
-      key: 'developers',
-      label: 'Developers & Property Owners',
-      heading: 'Unlock Property Value & Rental Yields',
+      key: 'industrial-developers',
+      label: 'Industrial Developers',
+      heading: 'Convert Underutilized Properties into Grade-A Spaces',
       points: [
-        'Convert underperforming Grade-B assets into Grade-A infrastructure that commands premium rental yields.',
-        'Access an end-to-end retrofit partner — from compliance to construction to tenant leasing.',
-        'De-risk investment with a phased, milestone-based retrofit program.',
-        'Position assets for institutional capital, REITs, and long-term lease structures.',
+        'Partner with Travida for end-to-end retrofit execution — legal, structural, and technical.',
+        'Unlock higher rental yields by upgrading Grade-B assets to Grade-A compliance standards.',
+        'De-risk conversion projects with a phased, milestone-based retrofit program.',
+        'Position upgraded assets for institutional capital and long-term lease structures.',
       ],
     },
     {
       key: 'government',
-      label: 'Government Bodies',
-      heading: 'Support Logistics Infrastructure Goals',
+      label: 'Government Entities',
+      heading: 'Supporting National Logistics Policy & PM Gati Shakti Compliance',
       points: [
-        'Directly support National Logistics Policy (NLP) objectives around cost, quality, and formalization of logistics infrastructure.',
+        'Directly support National Logistics Policy (NLP) objectives around cost, quality, and formalization.',
         'Advance PM Gati Shakti multimodal connectivity goals through compliant, audit-ready industrial assets.',
         'Improve state-level warehousing formalization and tax compliance.',
         'Accelerate green infrastructure adoption through solar-integrated retrofits.',
+      ],
+    },
+    {
+      key: 'land-owners',
+      label: 'Land Owners & Property Developers',
+      heading: 'Monetize Assets Through Strategic Upgrades',
+      points: [
+        'Convert underperforming Grade-B assets into Grade-A infrastructure that commands premium rental yields.',
+        'Access structured leasing strategies that maximize return on industrial property.',
+        'Qualify for green infrastructure financing and institutional lease structures.',
+        'Work with a single accountable partner across compliance, retrofit, and leasing.',
+      ],
+    },
+    {
+      key: 'corporates',
+      label: 'Established Corporates',
+      heading: 'Scale Operations with Legal & Technical Support',
+      points: [
+        'Expand logistics footprint with fully compliant, audit-ready warehouse infrastructure.',
+        'Reduce legal and operational risk with end-to-end regulatory documentation support.',
+        'Benefit from technical expertise across structural, fire, and environmental compliance.',
+        'Move faster with pre-vetted, ready-to-occupy Grade-A facilities.',
       ],
     },
   ],
@@ -150,6 +189,7 @@ export const defaultContent = {
       { label: 'Compliance Success Rate', value: '98%' },
       { label: 'Sq. Ft. Under Retrofit Advisory', value: '2M+' },
       { label: 'States Covered', value: '8+' },
+      { label: 'Avg. Rental Yield Increase', value: '30–40%' },
     ],
   },
   contact: {
